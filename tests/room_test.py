@@ -54,3 +54,7 @@ class TestRoom(unittest.TestCase):
     def test_dont_cheer_when_not_fav_song(self):
         self.room1.add_guest(self.guest2)
         self.assertEqual(None, self.room1.play_song(self.s1))
+
+    def test_clear_room(self):
+        self.room1.clear_room()
+        self.assertEqual(0, len(self.room1.guests))

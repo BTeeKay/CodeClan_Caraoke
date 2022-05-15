@@ -25,3 +25,6 @@ class Rooms:
         for g in self.guests:
             if g.song == song:
                 return "This is my Jaaaam"
+
+    def clear_room(self):
+        self.guests.clear()

@@ -17,3 +17,7 @@ class TestGuest(unittest.TestCase):
     
     def test_guest_has_enough_money(self):
         self.assertFalse(self.g1.guest_has_enough_money(self.r1))
+    
+    def test_cash_taken_from_guest(self):
+        self.b1.transaction(self.r1, self.g1)
+        self.assertEqual(180, self.g1.wallet)
